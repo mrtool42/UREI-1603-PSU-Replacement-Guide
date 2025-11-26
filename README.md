@@ -1,2 +1,76 @@
 # UREI-1603-PSU-Upgrade-Switch-Mode-Rebuild-Tutorial
 Instructions to replace the original PSU for a reliable switching-PSU to prevent damages from over-voltages
+
+
+The UREI 1603 is a fully analog DJ/club mixer. Its original power supply is known to fail after several thousand operating hours, producing over-current and unstable DC rails that can damage the mixer over time. Commercial workshops offer PSU rebuilds for high prices, often several hundred pesos for a conceptually simple solution using standard power modules.
+This guide is published to provide transparent, reproducible Open-Source knowledge, enabling users to understand the rebuild and perform it independently.
+Upgrade Goal
+Replace the original PSU section with:
+* Two isolated 12V DC switch-mode PSU modules to form ±12V rails for the analog audio path
+* One 7809 linear regulator stage to generate a clean +9V rail as a stable replacement for the internal +8V logic rail
+* Bypass all original ±16V linear regulation stages to eliminate heat and stress
+
+Required Components
+Component	Specification
+2× 12V DC SMPS units	Isolated, stable, low-noise, 1.5–2A each, adjustable via trim-pot (Meanwell RS-15-12)
+1× 7809 Linear Regulator	TO-220 type, 9V output, 1A max (e.g., MC7809CTG or LM7809 equivalent)
+DC wiring	0.5–1 mm² copper, insulated
+Insulation & mechanical	Shrink tubing and secure mounting for PSUs
+PSU Rebuild Wiring
+1. Mains Input
+230 VAC IN → Both 12V PSUs
+
+
+2. Forming the ±12V Audio Rails
+Cut all wires to/from the old PSU and remove that sucker.
+* You start from the red wire:
+* The red wire remains loose, 8V coming later from the Regulator
+* GND to PSU1 negative
+* +16V to PSU1 positive
+* GND + GND to PSU2 positive (common ground reference)
+* –16V to PSU2 negative
+Result on the mixer PCB:
+PCB Silkscreen	New Supply
++16V	+12.0–12.2 V DC
+–16V	–12.0–12.2 V DC
+The Master-PCB now distributes ±12V internally as a replacement for the former ±16V rails.
+
+3. Generating the +9V Logic Rail (7809 Stage)
+7809 Pin	Connection
+1 (IN)	PCB pad labeled "+16V"
+2 (GND)	PCB Ground (mixer internal GND pad)
+3 (OUT)	PCB pad labeled "+8V"
+This feeds +9.0 V regulated into the logic section that was originally labeled +8V.
+Compatible, lower-stress replacement powering:
+* LEDs
+* Relays
+* Cue circuits
+* FET muting/VCA control (All analog control, not audio DSP)
+
+Voltage Trimming
+* Trim both PSUs to 12.0–12.2 V
+* 7809 output is fixed at 9.0 V
+* Typical mixer load is ~200–400 mA, so 1 A capability is sufficient
+
+Post-Upgrade Verification
+Measure on the Master-PCB:
+PCB Pad	Target	Tolerance
++8V	+9.0 V DC	±5 %
++16V	+12.1 V DC	±10 %
+–16V	–12.1 V DC	±10 %
+If values are within range, the PSU rebuild is electrically correct.
+
+Final Result
+* Mixer remains 100% analog
+* Runs cooler and more stable
+* PSU stress and destructive over-current issue removed
+* No digital audio or DSP rails introduced
+* Audio circuitry (Op-Amps/VCA) tolerates ±12 V operation safely
+* Output headroom is slightly reduced vs. ±16 V but remains fully functional and stable
+
+Disclaimer
+You perform all modifications at your own risk. Always insulate all wiring properly, avoid accidental DC shorts, and confirm correct polarity before first power-on.
+
+License
+MIT © 2025 Mario
+Permission is granted to use, modify, and share this documentation freely.
