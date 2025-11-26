@@ -2,17 +2,16 @@
 Instructions to replace the original PSU for a reliable switching-PSU to prevent damages from over-voltages
 
 
-The UREI 1603 is a fully analog DJ/club mixer.
+The UREI 1603 is an amazing fully analog DJ/club mixer.
 
-Its original power supply is known to fail after several thousand operating hours, producing over-current and unstable DC rails that can damage the mixer over time. 
+Its original power supply is known to fail after several thousand operating hours, producing over-current and unstable DC rails that will damage the mixer over time. 
 
-Commercial workshops offer PSU rebuilds for high prices, often several hundred pesos for a conceptually simple solution using standard power modules.
+Commercial workshops offer PSU replacements for high prices, often several hundred pesos for a conceptually simple solution using standard power modules.
+
+In this Tutorial, you will replace your 1603 PSU for about 20 bucks.
 
 
 This guide is published to provide transparent, reproducible Open-Source knowledge, enabling users to understand the rebuild and perform it independently.
-
-
-Upgrade Goal
 
 Replace the original PSU section with:
 * Two isolated 12V DC switch-mode PSU modules to form ±12V rails for the analog audio path
