@@ -74,7 +74,7 @@ The Master-PCB now distributes ±12V internally as a replacement for the former 
 
 3 (OUT)	PCB pad labeled "+8V"
 
-This feeds +9.0 V regulated into the logic section that was originally labeled +8V.
+This feeds +9.0V regulated into the logic section that was originally labeled +8V.
 
 ![IMG_0243 2](https://github.com/user-attachments/assets/91bf8613-4571-4749-8347-fb8e685c3f9c)
 
@@ -92,11 +92,11 @@ Measure on the Master-PCB:
 
 PCB Pad	Target	Tolerance
 
-+8V	+9.0 V DC	±5 %
++8V	+9.0V DC	±5 %
 
-+16V	+12.1 V DC	±10 %
++16V	+12.1V DC	±10 %
 
-–16V	–12.1 V DC	±10 %
+–16V	–12.1V DC	±10 %
 
 If values are within range, the PSU rebuild is electrically correct.
 
@@ -110,9 +110,9 @@ If values are within range, the PSU rebuild is electrically correct.
 
 * No digital audio or DSP rails introduced
 
-* Audio circuitry (Op-Amps/VCA) tolerates ±12 V operation safely
+* Audio circuitry (Op-Amps/VCA) tolerates ±12V operation safely
 
-* Output headroom is slightly reduced vs. ±16 V but remains fully functional and stable
+* Output headroom is slightly reduced vs. ±16V but remains fully functional and stable
 
 Disclaimer
 
