@@ -46,10 +46,14 @@ Cut all wires to/from the old PSU and remove that sucker.
 * +16V to PSU1 positive
 * GND + GND to PSU2 positive (common ground reference)
 * –16V to PSU2 negative
+
 Result on the mixer PCB:
-PCB Silkscreen	New Supply
+
+New Supply
+
 +16V	+12.0–12.2 V DC
 –16V	–12.0–12.2 V DC
+
 The Master-PCB now distributes ±12V internally as a replacement for the former ±16V rails.
 
 ![IMG_0268](https://github.com/user-attachments/assets/ff632b91-5631-466a-b691-02598dfb3b4a)
