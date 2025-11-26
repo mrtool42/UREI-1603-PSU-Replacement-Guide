@@ -19,12 +19,12 @@ Operating the analog path at ±12 V stays within the acceptable limits of the or
 
 This guide is published to provide transparent, reproducible Open-Source knowledge, enabling users to understand the rebuild and perform it independently.
 
-Replace the original PSU section with:
+**Replace the original PSU section with:**
 * Two isolated 12V DC switch-mode PSU modules to form ±12V rails for the analog audio path
 * One 7809 linear regulator stage to generate a clean +9V rail as a stable replacement for the internal +8V logic rail
 * Bypass all original ±16V linear regulation stages to eliminate heat and stress
 
-Required Components
+**Required Components**
 
 2× 12V DC SMPS units	Isolated, stable, low-noise, 1.5–2A each, adjustable via trim-pot (Meanwell RS-15-12)
 
@@ -34,12 +34,12 @@ DC wiring	0.5–1 mm² copper, insulated
 
 Insulation & mechanical	Shrink tubing and secure mounting for PSUs
 
-PSU Rebuild Wiring
+**PSU Rebuild Wiring**
 1. Mains Input
 230 VAC IN → Both 12V PSUs
 
 
-2. Forming the ±12V Audio Rails
+**2. Forming the ±12V Audio Rails**
 
 Cut all wires to/from the old PSU and remove that sucker.
 
@@ -52,9 +52,7 @@ Cut all wires to/from the old PSU and remove that sucker.
 * GND + GND to PSU2 positive (common ground reference)
 * –16V to PSU2 negative
 
-Result on the mixer PCB:
-
-New Supply
+**Result on the mixer PCB witch new PSU:**
 
 +16V	+12.0–12.2 V DC
 –16V	–12.0–12.2 V DC
@@ -66,7 +64,7 @@ The Master-PCB now distributes ±12V internally as a replacement for the former 
 
 ![IMG_0252 2](https://github.com/user-attachments/assets/e34f9d1f-ff22-41f6-acbc-1e3009adcbe5)
 
-3. Generating the +9V Logic Rail (7809 Stage)
+**3. Generating the +9V Logic Rail (7809 Stage)**
 
 7809 Pin	Connection
 
@@ -80,7 +78,7 @@ This feeds +9.0 V regulated into the logic section that was originally labeled +
 
 ![IMG_0243 2](https://github.com/user-attachments/assets/91bf8613-4571-4749-8347-fb8e685c3f9c)
 
-Voltage Trimming
+**Voltage Trimming**
 
 * Trim both PSUs to 12.0–12.2 V
 
@@ -102,7 +100,7 @@ PCB Pad	Target	Tolerance
 
 If values are within range, the PSU rebuild is electrically correct.
 
-Final Result
+**Final Result**
 
 * Mixer remains 100% analog
 
