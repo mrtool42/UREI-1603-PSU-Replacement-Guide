@@ -40,7 +40,7 @@ Cut all wires to/from the old PSU and remove that sucker.
 
 ![IMG_0255 2](https://github.com/user-attachments/assets/fccbd49f-568b-48f0-bd84-b82d81dbb92a)
 
-* You start from the red wire:
+* You start from the red wire (8V+):
 * The red wire remains loose, 8V coming later from the Regulator
 * GND to PSU1 negative
 * +16V to PSU1 positive
@@ -51,6 +51,9 @@ PCB Silkscreen	New Supply
 +16V	+12.0–12.2 V DC
 –16V	–12.0–12.2 V DC
 The Master-PCB now distributes ±12V internally as a replacement for the former ±16V rails.
+
+![IMG_0268](https://github.com/user-attachments/assets/ff632b91-5631-466a-b691-02598dfb3b4a)
+
 
 ![IMG_0252 2](https://github.com/user-attachments/assets/e34f9d1f-ff22-41f6-acbc-1e3009adcbe5)
 
