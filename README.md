@@ -13,6 +13,7 @@ This guide is published to provide transparent, reproducible Open-Source knowled
 
 
 Upgrade Goal
+
 Replace the original PSU section with:
 * Two isolated 12V DC switch-mode PSU modules to form ±12V rails for the analog audio path
 * One 7809 linear regulator stage to generate a clean +9V rail as a stable replacement for the internal +8V logic rail
