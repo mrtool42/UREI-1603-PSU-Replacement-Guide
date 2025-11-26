@@ -14,7 +14,7 @@ The ±12 V rails provide sufficient operating range for all audio and control IC
 
 The original ±16 V and +8 V rails are not mandatory for proper function, and their replacement does not reduce reliability or safety.
 
-Operating the analog path at ±12 V is within the tolerance of the original circuit design and is considered electrically sound for long-term operation.
+Operating the analog path at ±12 V stays within the acceptable limits of the original circuit design and is a technically reliable and electrically safe solution for long-term use.
 
 
 This guide is published to provide transparent, reproducible Open-Source knowledge, enabling users to understand the rebuild and perform it independently.
