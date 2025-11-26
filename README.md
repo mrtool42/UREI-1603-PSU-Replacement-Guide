@@ -10,6 +10,12 @@ Commercial workshops offer PSU replacements for high prices, often several hundr
 
 In this Tutorial, you will replace your 1603 PSU for about 20 bucks.
 
+The ±12 V rails provide sufficient operating range for all audio and control ICs in the mixer.
+
+The original ±16 V and +8 V rails are not mandatory for proper function, and their replacement does not reduce reliability or safety.
+
+Operating the analog path at ±12 V is within the tolerance of the original circuit design and is considered electrically sound for long-term operation.
+
 
 This guide is published to provide transparent, reproducible Open-Source knowledge, enabling users to understand the rebuild and perform it independently.
 
