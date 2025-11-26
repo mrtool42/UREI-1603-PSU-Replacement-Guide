@@ -23,6 +23,9 @@ PSU Rebuild Wiring
 
 2. Forming the ±12V Audio Rails
 Cut all wires to/from the old PSU and remove that sucker.
+
+![IMG_0255 2](https://github.com/user-attachments/assets/fccbd49f-568b-48f0-bd84-b82d81dbb92a)
+
 * You start from the red wire:
 * The red wire remains loose, 8V coming later from the Regulator
 * GND to PSU1 negative
@@ -35,12 +38,17 @@ PCB Silkscreen	New Supply
 –16V	–12.0–12.2 V DC
 The Master-PCB now distributes ±12V internally as a replacement for the former ±16V rails.
 
+![IMG_0252 2](https://github.com/user-attachments/assets/e34f9d1f-ff22-41f6-acbc-1e3009adcbe5)
+
 3. Generating the +9V Logic Rail (7809 Stage)
 7809 Pin	Connection
 1 (IN)	PCB pad labeled "+16V"
 2 (GND)	PCB Ground (mixer internal GND pad)
 3 (OUT)	PCB pad labeled "+8V"
 This feeds +9.0 V regulated into the logic section that was originally labeled +8V.
+
+![IMG_0243 2](https://github.com/user-attachments/assets/91bf8613-4571-4749-8347-fb8e685c3f9c)
+
 Compatible, lower-stress replacement powering:
 * LEDs
 * Relays
