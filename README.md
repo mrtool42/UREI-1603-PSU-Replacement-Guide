@@ -87,13 +87,11 @@ This feeds +9.0V regulated into the logic section that was originally labeled +8
 
 Measure on the Master-PCB:
 
-PCB Pad	Target	Tolerance
++8V	+9.0V DC
 
-+8V	+9.0V DC	±5 %
++16V	+12.1V DC
 
-+16V	+12.1V DC	±10 %
-
-–16V	–12.1V DC	±10 %
+–16V	–12.1V DC
 
 If values are within range, the PSU rebuild is electrically correct.
 
