@@ -1,23 +1,23 @@
-# UREI-1603-PSU-Upgrade-Switch-Mode-Rebuild-Tutorial
+# UREI-1603-PSU-Replacement-Guide
 Instructions to replace the original PSU for a reliable switching-PSU to prevent damages from over-voltages
 
 
 The UREI 1603 is an amazing fully analog DJ/club mixer.
 
-Its original power supply is known to fail after several thousand operating hours, producing over-current and unstable DC rails that will damage the mixer over time. 
+Its original power supply is known to fail after several thousands of operating hours, producing over-current and unstable DC spikes that will damage the mixer over time. 
 
 Commercial workshops offer PSU replacements for high prices, often several hundred pesos for a conceptually simple solution using standard power modules.
 
-In this Tutorial, you will replace your 1603 PSU for about 20 bucks.
+In this Tutorial, you will replace your Urei-1603 PSU for about 20 bucks.
 
-The ±12 V rails provide sufficient operating range for all audio and control ICs in the mixer.
+The ±12V rails provide sufficient operating range for all audio and control ICs in the mixer.
 
-The original ±16 V and +8 V rails are not mandatory for proper function, and their replacement does not reduce reliability or safety.
+The original ±16V and +8V rails are not mandatory for proper function, and their replacement does not reduce reliability or safety.
 
-Operating the analog path at ±12 V stays within the acceptable limits of the original circuit design and is a technically reliable and electrically safe solution for long-term use.
+Operating the analog path at ±12V stays within the acceptable limits of the original circuit design and is a technically reliable and electrically safe solution for long-term use.
 
 
-This guide is published to provide transparent, reproducible Open-Source knowledge, enabling users to understand the rebuild and perform it independently.
+This guide is published to provide transparent, reproducible Open-Source knowledge, enabling users to understand the replacement and perform it independently.
 
 **Replace the original PSU section with:**
 * Two isolated 12V DC switch-mode PSU modules to form ±12V rails for the analog audio path
@@ -26,7 +26,7 @@ This guide is published to provide transparent, reproducible Open-Source knowled
 
 **Required Components**
 
-2× 12V DC SMPS units	Isolated, stable, low-noise, 1.5–2A each, adjustable via trim-pot (Meanwell RS-15-12)
+2× 12V DC SMPS units	Isolated, stable, low-noise, 1.5–2A each, adjustable via trim-pot (e.g., Meanwell RS-15-12)
 
 1× 7809 Linear Regulator	TO-220 type, 9V output, 1A max (e.g., MC7809CTG or LM7809 equivalent)
 
@@ -46,13 +46,13 @@ Cut all wires to/from the old PSU and remove that sucker.
 ![IMG_0255 2](https://github.com/user-attachments/assets/fccbd49f-568b-48f0-bd84-b82d81dbb92a)
 
 * You start from the red wire (8V+):
-* The red wire remains loose, 8V coming later from the Regulator
+* The red wire remains loose (just insulate it), 8V+ coming later from the Linear-Regulator
 * GND to PSU1 negative
 * +16V to PSU1 positive
 * GND + GND to PSU2 positive (common ground reference)
 * –16V to PSU2 negative
 
-**Result on the mixer PCB witch new PSU:**
+**Result on the mixer PCB with the new PSU:**
 
 The Master-PCB now distributes ±12V internally as a replacement for the former ±16V rails.
 
