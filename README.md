@@ -10,6 +10,8 @@ Commercial workshops offer PSU replacements for high prices, often several hundr
 
 In this Tutorial, you will replace your Urei-1603 PSU for about 20 bucks.
 
+A prerequisite is that the mixer has not (yet) been damaged by over-voltage events, as existing electrical damage can compromise correct operation after the PSU rebuild.
+
 The ±12V rails provide sufficient operating range for all audio and control ICs in the mixer.
 
 The original ±16V and +8V rails are not mandatory for proper function, and their replacement does not reduce reliability or safety.
