@@ -6,7 +6,7 @@ The UREI 1603 is an amazing fully analog DJ/club mixer.
 
 Its original power supply is known to fail after several thousands of operating hours, producing over-current and unstable DC spikes that will damage the mixer over time. 
 
-Commercial workshops offer PSU replacements for high prices, often several hundred pesos for a conceptually simple solution using standard power modules.
+Commercial workshops offer PSU replacements, often several hundred pesos for a conceptually simple solution using standard power modules.
 
 In this Tutorial, you will replace your Urei-1603 PSU for about 20 bucks.
 
@@ -34,7 +34,7 @@ This guide is published to provide transparent, reproducible Open-Source knowled
 
 DC wiring	0.5–1 mm² copper, insulated
 
-Insulation & mechanical	Shrink tubing and secure mounting for PSUs
+Insulation & mechanical	Shrink tubing
 
 **PSU Rebuild Wiring**
 1. Mains Input
@@ -48,10 +48,10 @@ Cut all wires to/from the old PSU and remove that sucker.
 ![IMG_0255 2](https://github.com/user-attachments/assets/fccbd49f-568b-48f0-bd84-b82d81dbb92a)
 
 * You start from the red wire (8V+):
-* The red wire remains loose (just insulate it), 8V+ coming later from the Linear-Regulator
+* The red wire remains loose (just insulate it), 8V+ coming later from the Linear regulator
 * GND to PSU1 negative
 * +16V to PSU1 positive
-* GND + GND to PSU2 positive (common ground reference)
+* GND + GND to PSU2 positive
 * –16V to PSU2 negative
 
 **Result on the mixer PCB with the new PSU:**
@@ -65,7 +65,7 @@ The Master-PCB now distributes ±12V internally as a replacement for the former 
 
 **3. Generating the +9V Logic Rail (7809 Stage)**
 
-7809 Pin	Connection
+*7809 Pin	Connection*
 
 1 (IN)	PCB pad labeled "+16V"
 
@@ -79,33 +79,29 @@ This feeds +9.0V regulated into the logic section that was originally labeled +8
 
 **Voltage Trimming**
 
-* Trim both PSUs to 12.0–12.2 V
+* Trim both PSUs to 12.1V
 
-* 7809 output is fixed at 9.0 V
+* 7809 output is fixed at 9.0V
 
-* Typical mixer load is ~200–400 mA, so 1 A capability is sufficient
+* Typical mixer load is ~200–400 mA, so 1A capability is sufficient
 
 **Post-Upgrade Verification**
 
 Measure on the Master-PCB:
 
-+8V	+9.0V DC
++8V	-> +9.0V DC
 
-+16V	+12.1V DC
++16V	-> +12.1V DC
 
-–16V	–12.1V DC
+–16V	-> –12.1V DC
 
 If values are within range, the PSU rebuild is electrically correct.
 
 **Final Result**
 
-* Mixer remains 100% analog
-
 * Runs cooler and more stable
 
 * PSU stress and destructive over-current issue removed
-
-* No digital audio or DSP rails introduced
 
 * Audio circuitry (Op-Amps/VCA) tolerates ±12V operation safely
 
@@ -116,4 +112,4 @@ Disclaimer
 You perform all modifications at your own risk. Always insulate all wiring properly, avoid accidental DC shorts, and confirm correct polarity before first power-on.
 
 
-Permission is granted to use, modify, and share this documentation freely.
+Feel free to use, modify, and share this documentation!
