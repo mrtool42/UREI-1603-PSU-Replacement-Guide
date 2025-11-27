@@ -54,9 +54,6 @@ Cut all wires to/from the old PSU and remove that sucker.
 
 **Result on the mixer PCB witch new PSU:**
 
-+16V	+12.0–12.2 V DC
-–16V	–12.0–12.2 V DC
-
 The Master-PCB now distributes ±12V internally as a replacement for the former ±16V rails.
 
 ![IMG_0268](https://github.com/user-attachments/assets/ff632b91-5631-466a-b691-02598dfb3b4a)
@@ -86,7 +83,7 @@ This feeds +9.0V regulated into the logic section that was originally labeled +8
 
 * Typical mixer load is ~200–400 mA, so 1 A capability is sufficient
 
-Post-Upgrade Verification
+**Post-Upgrade Verification**
 
 Measure on the Master-PCB:
 
